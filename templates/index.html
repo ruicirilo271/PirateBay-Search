@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa Torrent – PirateBay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>🔍 PirateBay Search</h1>
+</header>
+
+<div class="container">
+
+    <form method="POST" class="search-box">
+        <input type="text" name="query" placeholder="Pesquisar torrents..."
+               value="{{ query }}" required>
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <div class="results">
+        {% for movie in movies %}
+            <div class="card">
+                <h2 class="title">{{ movie.title }}</h2>
+
+                <div class="details">
+                    <span class="seeders">Seeders: {{ movie.seeders }}</span>
+                    <span class="leechers">Leechers: {{ movie.leechers }}</span>
+                    <span class="size">Tamanho: {{ movie.size | int // 1024 // 1024 }} MB</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="{{ movie.magnet }}" class="btn magnet">Magnet</a>
+
+                    <a href="stremio://{{ movie.magnet }}"
+                       class="btn stremio">
+                       Abrir no Stremio
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

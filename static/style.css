@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #020617, #000814 40%, #000);
+    font-family: 'Orbitron', sans-serif;
+    color: #e0f2fe;
+    overflow-x: hidden;
+}
+
+/* TOPO */
+.topbar {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 10, 30, 0.6);
+    border-bottom: 2px solid #0ea5e9;
+    backdrop-filter: blur(6px);
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #38bdf8;
+}
+
+/* PESQUISA */
+.search-box {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #38bdf8;
+    background: #0a1128;
+    color: #38bdf8;
+    font-size: 18px;
+}
+
+.search-box button {
+    padding: 14px 20px;
+    border: none;
+    background: #38bdf8;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.error {
+    text-align: center;
+    color: #f87171;
+    font-size: 18px;
+}
+
+/* RESULTADOS */
+.results {
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    padding: 20px;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    background: rgba(0, 20, 40, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 12px #38bdf8;
+}
+
+.card .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #7dd3fc;
+}
+
+.card .details {
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.seeders {
+    color: #22c55e;
+}
+
+.leechers {
+    color: #ef4444;
+}
+
+.size {
+    color: #a5b4fc;
+}
+
+/* BOTÕES */
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.magnet {
+    background: #38bdf8;
+}
+
+.stremio {
+    background: #a78bfa;
+}
